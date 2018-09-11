@@ -16,25 +16,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Button button = findViewById(R.id.button);
         button.setOnClickListener(this);
-        replaceFragment(new RightFragment());
+//        replaceFragment(new RightFragment());
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                replaceFragment(new AnotherRightFragment());
+//                replaceFragment(new AnotherRightFragment());
                 break;
             default:
                 break;
         }
     }
 
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.right_layout, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
+//    private void replaceFragment(Fragment fragment) {
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction transaction = fragmentManager.beginTransaction();
+//        transaction.replace(R.id.right_layout, fragment);
+//        transaction.addToBackStack(null);
+//        transaction.commit();
+//    }
 }
